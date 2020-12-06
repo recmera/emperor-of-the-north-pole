@@ -12,9 +12,9 @@ public class PlayerController : MonoBehaviour{
 
     public float playerSpeed;
     private  Vector3 movePlayer;
-    public float gravity = 9.8f;
+    public float gravity = 30.0f;
     public float fallVelocity;
-    public float jumpForce;
+    public float jumpForce = 8.0f;
 
 
     public Camera mainCamera;
