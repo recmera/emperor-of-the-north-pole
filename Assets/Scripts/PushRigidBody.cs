@@ -6,7 +6,7 @@ public class PushRigidBody : MonoBehaviour{
     // Start is called before the first frame update
     [Range(0,10)]public float pushPower;
     private float targetMass;
-  
+    
     private void onControllerColliderHit(ControllerColliderHit hit){
 
         // Cuando colisionemos con un cuerpo, detectamos si es rigidbody y lo almacenamos
@@ -27,5 +27,6 @@ public class PushRigidBody : MonoBehaviour{
         Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
 
         body.velocity = (pushDir * pushPower) / targetMass;
-    }
+    } 
+    
 }
