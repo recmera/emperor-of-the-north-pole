@@ -13,6 +13,10 @@ public class MoveWithFloor : MonoBehaviour{
 
     Quaternion actualRot;
     Quaternion lastRot;
+
+    public Vector3 originOffset;
+    public float factorDivision = 4.2f;
+
     void Start(){
         
         player = this.GetComponent<CharacterController>();
@@ -24,7 +28,7 @@ public class MoveWithFloor : MonoBehaviour{
         if(player.isGrounded){
             RaycastHit hit;
 
-            if(Physics.SphereCast(transform.position, player.height/4.2f, -transform.up, out hit)){
+            if(Physics.SphereCast(transform.position + originOffset, player.radius/factorDivision, -transform.up, out hit)){
 
                 GameObject groundedIn = hit.collider.gameObject;
                 groundName = groundedIn.name;
@@ -58,6 +62,6 @@ public class MoveWithFloor : MonoBehaviour{
     }
     private void OnDrawGizmos(){
         player = this.GetComponent<CharacterController>();
-        Gizmos.DrawWireSphere(transform.position, player.height / 4.2f);
+        Gizmos.DrawWireSphere(transform.position + originOffset, player.radius /factorDivision);
     }
 }

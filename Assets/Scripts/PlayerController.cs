@@ -29,12 +29,18 @@ public class PlayerController : MonoBehaviour{
     public float slopeForceDown;
 
 
+    // Variables Animación
+
+    public Animator playerAnimatorController;
+
 
 
     // Carga de componente CharacterController en la
     // variable player, al iniciar el script
     void Start(){
         player = GetComponent<CharacterController>();
+        playerAnimatorController = GetComponent<Animator>();
+    
     }
 
     //  bucle de juego que se ejecuta en cada frame
@@ -52,6 +58,11 @@ public class PlayerController : MonoBehaviour{
         // Se limita su magnitud a 1 para evitar aceleraciones en
         // movimientos diagonales
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
+
+
+
+        playerAnimatorController.SetFloat("PlayerWalkVelocity", playerInput.magnitude * playerSpeed);
+
 
 
         camDirection();
@@ -98,11 +109,13 @@ public class PlayerController : MonoBehaviour{
             fallVelocity = jumpForce;
             // Y pasamos el valor a movePlayer.y
             movePlayer.y = fallVelocity;
+
+            playerAnimatorController.SetTrigger("PlayerJump");
         }
     }
 
     // Funcion para la gravedad.
-    void SetGravity(){
+    public void SetGravity(){
         // Si estamos tocando el suelo
         if(player.isGrounded){
             // La velocidad de caida es igual a la gravedad 
@@ -115,9 +128,11 @@ public class PlayerController : MonoBehaviour{
             // valor de la gravedad * Time.deltaTime.
             fallVelocity -= gravity * Time.deltaTime; 
             movePlayer.y = fallVelocity;
+            playerAnimatorController.SetFloat("PlayerVerticalVelocity", player.velocity.y);
         }
         // Llamamos a la funcion SlideDown() 
         // para comprobar si estamos en una pendiente
+        playerAnimatorController.SetBool("IsGrounded", player.isGrounded);
         SlideDown();
     }
 
@@ -143,6 +158,20 @@ public class PlayerController : MonoBehaviour{
     private void OnControllerColliderHit(ControllerColliderHit hit){
         //Almacenamos la normal del plano contra el que hemos chocado en hitNormal.
         hitNormal = hit.normal;
+    }
+    private void onTriggerStay(Collider other){
+        if(other.tag == "MovingPlatform"){
+            Debug.Log("UNA PLATAFORMA!");
+            player.transform.SetParent(other.transform);
+        }
+    }
+    private void OnTriggerExit(Collider other){
+        if(other.tag == "MovingPlatform"){
+            player.transform.SetParent(null);
+        }
+    }
+    private void OnAnimatorMove(){
+
     }
 
 }
