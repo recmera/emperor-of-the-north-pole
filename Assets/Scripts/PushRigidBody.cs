@@ -16,10 +16,13 @@ public class PushRigidBody : MonoBehaviour{
         if(body == null || body.isKinematic){
             return;
         }
+        
         // Si chocamos con un objeto en y es menor que -0.3
+        /*
         if(hit.moveDirection.y < -0.3){
             return;
         }
+        */
         // almacenamos la masa del rigidbody
         targetMass = body.mass;
 
