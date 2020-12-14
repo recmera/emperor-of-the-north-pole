@@ -1,5 +1,4 @@
-# Emperor of the North Pole
-
+# Emperor of the North Pole 🐧 🧊
 Escrito, diseñado y programado por @Rickiwasho
 
 ### Especificaciones
@@ -10,3 +9,6 @@ Escrito, diseñado y programado por @Rickiwasho
  - Periférico: Teclado y Mouse
  - Game engine: Unity y Blender
  - Iluminación: Tradicional (por defecto)
+
+
+🐧 🧊
