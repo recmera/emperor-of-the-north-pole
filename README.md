@@ -11,8 +11,9 @@ Escrito, diseñado y programado por @Rickiwasho
  - Iluminación: Tradicional (por defecto)
 
 
-🐧 🧊
-Recursos:
+
+Recursos 🐧🧊:
+
 [El pinguino y sus animaciones](https://assetstore.unity.com/packages/templates/tutorials/dyp-the-penguin-174519)
 
 
