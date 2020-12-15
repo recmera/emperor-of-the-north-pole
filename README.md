@@ -12,7 +12,7 @@ Escrito, diseñado y programado por @Rickiwasho
 
 
 
-Recursos 🐧🧊:
+### Recursos utilizados 🐧🧊:
 
 [El pinguino y sus animaciones](https://assetstore.unity.com/packages/templates/tutorials/dyp-the-penguin-174519)
 
