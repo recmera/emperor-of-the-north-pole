@@ -173,5 +173,6 @@ public class PlayerController : MonoBehaviour{
     private void OnAnimatorMove(){
 
     }
+     
 
 }
