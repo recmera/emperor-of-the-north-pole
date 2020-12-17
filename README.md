@@ -1,5 +1,7 @@
 # Emperor of the North Pole 🐧 🧊
-Escrito, diseñado y programado por @Rickiwasho
+Escrito, diseñado y programado por @Macrotus
+
+[Ver presentación](https://docs.google.com/presentation/d/1FWUIW1qYqXYRlYT4fBKRLuRqDGmmuKD2SKFAhUf16j8/edit?usp=sharing)
 
 ### Especificaciones
 
