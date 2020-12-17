@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour{
     public float verticalMove;
 
     private Vector3 playerInput;
+    //public GameManager gameManager;
 
     public CharacterController player;
     public float playerSpeed;

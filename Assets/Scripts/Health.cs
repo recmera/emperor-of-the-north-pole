@@ -40,7 +40,7 @@ public class Health : MonoBehaviour{
                     if (groundName == "Snow"){
                         Debug.Log("Tocó nieve");
                         //player.transform.position(0,0,0);
-                        player.transform.position = new Vector3(0, 0, 0);
+                        FindObjectOfType<GameManager>().EndGame();
                     }
                     
                 }
