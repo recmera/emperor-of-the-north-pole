@@ -1,5 +1,5 @@
 # Emperor of the North Pole 🐧 🧊
-Escrito, diseñado y programado por @Macrotus
+Escrito, diseñado y programado por [@Macrotus](https://github.com/macrotus)
 
 [Ver presentación](https://docs.google.com/presentation/d/1FWUIW1qYqXYRlYT4fBKRLuRqDGmmuKD2SKFAhUf16j8/edit?usp=sharing)
 
